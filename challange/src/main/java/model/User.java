@@ -1,11 +1,10 @@
 package model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Generated;
 import lombok.ToString;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
 @ToString
@@ -14,7 +13,15 @@ import lombok.ToString;
 public class User {
 
     @Id
-    @Column
+    @GeneratedValue
+    private long id;
 
+    private int CPF;
+
+    @DateTimeFormat
+    @GeneratedValue
+    private int birthdate;
+
+    
 
 }
