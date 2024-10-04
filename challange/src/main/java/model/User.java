@@ -13,15 +13,16 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue()
     private long id;
+
 
     private int CPF;
 
     @DateTimeFormat
-    @GeneratedValue
+    @GeneratedValue()
     private int birthdate;
 
-    
+
 
 }
