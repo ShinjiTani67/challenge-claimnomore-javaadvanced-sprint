@@ -1,6 +1,7 @@
 package model;
 
 import jakarta.persistence.*;
+import jdk.jfr.Name;
 import lombok.Data;
 import lombok.Generated;
 import lombok.ToString;
@@ -16,6 +17,9 @@ public class User {
     @GeneratedValue()
     private long id;
 
+    @Name()
+    @GeneratedValue()
+    private String name;
 
     private int CPF;
 
