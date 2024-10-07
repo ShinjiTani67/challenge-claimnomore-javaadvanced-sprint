@@ -1,6 +1,30 @@
 package model;
 
-public class Claim {
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.ToString;
 
-    //ai tem os trecos dos sinistros da vida
+import java.time.ZonedDateTime;
+@Data
+@ToString
+@Entity
+@Table(name = "tb_claim")
+public class Claim {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    //completar - criar automaticamente o valor
+    private ZonedDateTime claimDate;
+
+    @Column(name = "claim_text", length = 100, nullable = false)
+    private String claimText;
+
+    //completar
+    private ClaimStatus status;
+
+    @ManyToOne
+    @JoinColumn(name = "insurance_contract_claim_id", nullable = false)
+    private InsuranceContract insuranceContract;
+
 }
