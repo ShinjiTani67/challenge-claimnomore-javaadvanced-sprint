@@ -7,5 +7,5 @@ import model.User;
 
 public interface DentistMapper {
     static DentistDto toDto(Dentist project);
-    Dentist toEntity(Dentist projectDTO);
+    Dentist toEntity(Dentist DentistDto);
 }
