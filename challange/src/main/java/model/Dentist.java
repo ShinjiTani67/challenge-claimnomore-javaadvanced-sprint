@@ -11,7 +11,7 @@ import lombok.ToString;
 @Data
 @ToString
 @Entity
-@Table(name="dentist")
+@Table(name="tb_dentist")
 public class Dentist {
     
     @Id

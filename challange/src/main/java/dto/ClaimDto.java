@@ -11,9 +11,11 @@ import java.time.ZonedDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ClaimDto {
+
     private long id;
+
     private ZonedDateTime claimDate;
+
     private String claimText;
-    private ClaimStatus status;
 
 }

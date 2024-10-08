@@ -20,9 +20,6 @@ public class Claim {
     @Column(name = "claim_text", length = 100, nullable = false)
     private String claimText;
 
-    //completar
-    private ClaimStatus status;
-
     @ManyToOne
     @JoinColumn(name = "insurance_contract_claim_id", nullable = false)
     private InsuranceContract insuranceContract;
