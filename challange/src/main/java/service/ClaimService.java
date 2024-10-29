@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface ClaimService   {
     List<Claim> getAllClaim();
-    Claim createClaim(Claim xlaim);
+    Claim createClaim(Claim claim);
     Optional<Claim> getUserById(Long id);
     Claim updateClaim(long id, Claim claimDetails);
     void deleteClaim(Long id);
