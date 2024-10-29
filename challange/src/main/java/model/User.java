@@ -17,8 +17,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Name(name = "name_user")
-    @Column(name = "description", length = 100, nullable = false)
+    @Column(name = "name_user", length = 100, nullable = false)
     private String name;
 
     @Column(name = "cpf", length = 100, nullable = false)
@@ -26,7 +25,5 @@ public class User {
 
     @DateTimeFormat
     private int birthdate;
-
-
 
 }
