@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class EnterpriseDto {
 
     private long Id;
-    
+
     private String adress;
 
     private String cnpj;
