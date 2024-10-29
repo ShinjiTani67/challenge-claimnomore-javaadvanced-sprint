@@ -18,7 +18,9 @@ public class Claim {
     @Column(name = "claim_date", length = 100, nullable = false)
     private ZonedDateTime claimDate;
 
-    @Column(name = "claim_text", length = 100, nullable = false)
-    private String claimText;
+    @Column(name = "claim_description", length = 100, nullable = false)
+    private String description;
+
+
 
 }
