@@ -1,6 +1,5 @@
 package controller;
 
-
 import model.Claim;
 import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
