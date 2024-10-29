@@ -30,6 +30,9 @@ public class Dentist {
     @Column(name = "phone_dentist", length = 100, nullable = false)
     private int phone;
 
+    @Column(name = "email_dentist", length = 100, nullable = false)
+    private String email;
+
     @DateTimeFormat
     private int birthdate;
 }

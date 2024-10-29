@@ -10,17 +10,15 @@ import java.time.ZonedDateTime;
 @Entity
 @Table(name = "tb_claim")
 public class Claim {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(name = "claim_date", length = 100, nullable = false)
     private ZonedDateTime claimDate;
 
     @Column(name = "claim_text", length = 100, nullable = false)
     private String claimText;
-
-    @ManyToOne
-    @JoinColumn(name = "insurance_contract_claim_id", nullable = false)
-    private InsuranceContract insuranceContract;
 
 }
