@@ -19,7 +19,7 @@ import java.util.UUID;
 
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -33,4 +33,5 @@ public class UserController {
     public User createUser(@RequestBody User user) {
         return (User) userRepository.save(user);
     }
+
 }

@@ -19,6 +19,7 @@ public class User {
 
     @Column(name = "email_user", length = 100, nullable = false)
     private String email;
+
     @Column(name = "name_user", length = 100, nullable = false)
     private String name;
 
