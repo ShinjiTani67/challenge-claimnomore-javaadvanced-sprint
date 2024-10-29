@@ -29,11 +29,9 @@ public class ClaimController {
     }
 
 
-
-    // Endpoint para buscar projeto por UUID
     @GetMapping("/{uuid}")
     public ResponseEntity<UserDto> buscarPorUUID(@PathVariable UUID uuid) {
-        Optional<UserDto> userDto = userService.buscarPorUUID(uuid);
+        Optional<ClaimDto> ClaimDto = ClaimService.buscarPorUUID(uuid);
         return claimDto.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }

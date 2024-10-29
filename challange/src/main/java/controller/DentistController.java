@@ -29,8 +29,6 @@ public class DentistController {
         return dentistService.getAllProjectsPaged(pageable);
     }
 
-
-
     // Endpoint para buscar projeto por UUID
     @GetMapping("/{uuid}")
     public ResponseEntity<DentistDto> buscarPorUUID(@PathVariable UUID uuid) {

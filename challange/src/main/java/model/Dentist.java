@@ -15,11 +15,11 @@ import lombok.ToString;
 public class Dentist {
     
     @Id
-    @GeneratedValue()
+    @GeneratedValue("")
     private long id;   
     
     @Name("")
-    @GeneratedValue()
+    @GeneratedValue("")
     private String name;
     
 }

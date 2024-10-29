@@ -31,8 +31,6 @@ public class UserController {
     }
 
 
-
-    // Endpoint para buscar projeto por UUID
     @GetMapping("/{uuid}")
     public ResponseEntity<UserDto> buscarPorUUID(@PathVariable UUID uuid) {
         Optional<UserDto> userDto = userService.buscarPorUUID(uuid);
