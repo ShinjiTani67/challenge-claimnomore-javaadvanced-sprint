@@ -1,9 +1,9 @@
 package model;
 
 import jakarta.persistence.*;
-import jdk.jfr.Name;
 import lombok.Data;
 import lombok.ToString;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
 @ToString
@@ -29,4 +29,7 @@ public class Dentist {
 
     @Column(name = "phone_dentist", length = 100, nullable = false)
     private int phone;
+
+    @DateTimeFormat
+    private int birthdate;
 }

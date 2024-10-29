@@ -24,6 +24,10 @@ public class User {
     private int CPF;
 
     @DateTimeFormat
-    private int birthdate;
+    @Column(name = "admission_date", length = 100, nullable = false)
+    private int admissiondate;
+
+    @Column(name = "job", length = 100, nullable = false)
+    private String job;
 
 }
