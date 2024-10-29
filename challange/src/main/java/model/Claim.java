@@ -14,7 +14,6 @@ public class Claim {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    //completar - criar automaticamente o valor
     private ZonedDateTime claimDate;
 
     @Column(name = "claim_text", length = 100, nullable = false)

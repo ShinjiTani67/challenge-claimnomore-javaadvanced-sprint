@@ -14,17 +14,17 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class User {
 
     @Id
-    @GeneratedValue("")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Name("")
-    @GeneratedValue("")
+    @Name(name = "name_user")
+    @Column(name = "description", length = 100, nullable = false)
     private String name;
 
+    @Column(name = "cpf", length = 100, nullable = false)
     private int CPF;
 
     @DateTimeFormat
-    @GeneratedValue("")
     private int birthdate;
 
 

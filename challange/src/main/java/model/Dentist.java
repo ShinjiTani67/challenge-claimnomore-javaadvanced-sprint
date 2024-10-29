@@ -1,9 +1,6 @@
 package model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jdk.jfr.Name;
 import lombok.Data;
 import lombok.ToString;
@@ -15,11 +12,11 @@ import lombok.ToString;
 public class Dentist {
     
     @Id
-    @GeneratedValue("")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;   
     
     @Name("")
-    @GeneratedValue("")
     private String name;
-    
+
+
 }
