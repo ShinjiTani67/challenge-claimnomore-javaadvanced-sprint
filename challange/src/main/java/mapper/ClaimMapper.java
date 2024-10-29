@@ -6,6 +6,6 @@ import model.Claim;
 import model.User;
 
 public interface ClaimMapper {
-    static ClaimDto toDto(Claim project);
+    ClaimDto toDto(Claim claim);
     Claim toEntity(Claim projectDTO);
 }

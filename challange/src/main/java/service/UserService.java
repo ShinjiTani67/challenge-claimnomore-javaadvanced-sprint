@@ -3,7 +3,6 @@ package service;
 import dto.ClaimDto;
 import dto.UserDto;
 import mapper.UserMapper;
-import model.Claim;
 import model.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -18,11 +17,11 @@ import java.util.stream.Collectors;
 
 public class UserService {
 
-    private final UserRepository projetoRepository;
-    private final UserMapper projetoMapper;
+    private  UserRepository userRepository;
+    private  UserMapper userMapper;
 
     @Transactional
-    public List<UserDto> getAllProjects() {
+    public List<UserDto> getAllUser() {
         return UserRepository.findAll()
                 .stream()
                 .map(UserRepository::toDto)
@@ -30,20 +29,20 @@ public class UserService {
     }
 
     @Transactional
-    public Page<UserDto> getAllProjectsPaged(Pageable pageable) {
+    public Page<UserDto> getAllUserPaged(Pageable pageable) {
         return UserRepository.findAll(pageable)
                 .map(ClaimRepository::toDto);
     }
 
     @Transactional
-    public UserDto saveProject(UserDto userDto) {
+    public UserDto saveUser(UserDto userDto) {
 
-        Optional<User> projetoExistente = UserRepository.findByUuid(UserDto.getUuid());
-        if (projetoExistente.isPresent()) {
+        Optional<User> userExistente = UserRepository.findByUuid(UserDto.getUuid());
+        if (userExistente.isPresent()) {
             throw new IllegalArgumentException("Projeto com UUID já existente.");
         }
-        Projeto project = UserMapper.toEntity(projetoDTO);
-        Projeto savedProject = userRepository.save(project);
+        User project = UserMapper.toEntity(userDto);
+        User savedProject = userRepository.save(User);
         return UserMapper.toDto(savedProject);
     }
 
