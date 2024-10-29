@@ -1,4 +1,4 @@
 package service;
 
-public class ClaimService   {
+public interface ClaimService   {
 }

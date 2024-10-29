@@ -1,4 +1,4 @@
 package service;
 
-public class DentistService {
+public interface DentistService {
 }
