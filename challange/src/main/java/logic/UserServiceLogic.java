@@ -1,6 +1,5 @@
 package logic;
 
-
 import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -19,7 +18,7 @@ public class UserServiceLogic {
     }
 
     public User saveUser(User user) {
-        return userRepository.save(model.User);
+        return userRepository.save(User);
     }
 
     public Optional<User> getUserById(Long id) {
@@ -33,12 +32,11 @@ public class UserServiceLogic {
     public User updateUser(Long id, User user) {
         if (userRepository.existsById(id)) {
             user.setId(id);
-            return userRepository.save(user);
+            return userRepository.save(User);
         } else {
             throw new ResourceNotFoundException("User not found with id " + id);
         }
     }
-
 
     public void deleteUser(Long id) {
         if (userRepository.existsById(id)) {
