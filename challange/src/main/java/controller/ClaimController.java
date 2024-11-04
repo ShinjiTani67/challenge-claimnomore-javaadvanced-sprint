@@ -23,5 +23,5 @@ public class ClaimController {
     @PostMapping
     public Claim createClaim(@RequestBody User claim) {
         return (Claim) claimRepository.save(claim);
-
+    }
 }
