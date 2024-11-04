@@ -19,7 +19,7 @@ public class UserServiceLogic {
     }
 
     public User saveUser(User user) {
-        return userRepository.save(user);
+        return userRepository.save(model.User);
     }
 
     public Optional<User> getUserById(Long id) {
