@@ -3,6 +3,7 @@ package logic;
 
 import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import repository.UserRepository;
 import service.UserService;
@@ -10,8 +11,8 @@ import service.UserService;
 import java.util.List;
 import java.util.Optional;
 
-@Service
-public class UserServiceLogic implements UserService {
+@Component
+public class UserServiceLogic {
 
     private final UserRepository userRepository;
 
@@ -20,22 +21,18 @@ public class UserServiceLogic implements UserService {
         this.userRepository = userRepository;
     }
 
-    @Override
     public User saveUser(User user) {
         return userRepository.save(user);
     }
 
-    @Override
     public Optional<User> getUserById(Long id) {
         return userRepository.findById(id);
     }
 
-    @Override
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
-    @Override
     public User updateUser(Long id, User user) {
         if (userRepository.existsById(id)) {
             user.setId(id);
@@ -45,7 +42,7 @@ public class UserServiceLogic implements UserService {
         }
     }
 
-    @Override
+
     public void deleteUser(Long id) {
         if (userRepository.existsById(id)) {
             userRepository.deleteById(id);
@@ -53,5 +50,4 @@ public class UserServiceLogic implements UserService {
             throw new ResourceNotFoundException("User not found with id " + id);
         }
     }
-}
 }
