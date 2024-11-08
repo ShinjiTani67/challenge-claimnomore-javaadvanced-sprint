@@ -9,12 +9,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.util.UUID;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserDto {
 
-    private long id;
+    private UUID uuid;
 
     private String email;
 

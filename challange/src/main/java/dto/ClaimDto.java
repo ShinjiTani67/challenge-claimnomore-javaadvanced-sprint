@@ -6,13 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.ZonedDateTime;
+import java.util.UUID;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class ClaimDto {
 
-    private long id;
+    private UUID uuid;
 
     private ZonedDateTime claimDate;
 
