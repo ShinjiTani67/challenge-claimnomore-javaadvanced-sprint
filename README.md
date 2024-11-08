@@ -1,9 +1,10 @@
 # Claim Nomore  
 
 ## Índice 
--[Integrantes]
--[Descrição]   
--[Instalação]   
+
+- [Integrantes]
+- [Descrição]   
+- [Instalação]   
 
 ## Integrantes  
 - Carlos Eduardo RM
