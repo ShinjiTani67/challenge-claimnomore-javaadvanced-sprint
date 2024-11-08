@@ -6,9 +6,9 @@
 -[Instalação]   
 
 ## Integrantes  
-Carlos Eduardo RM
-Fernando Tanigushi RM553587
-João Vitor Valaitis Paulo RM553972
+- Carlos Eduardo RM
+- Fernando Tanigushi RM553587
+- João Vitor Valaitis Paulo RM553972
 
 
 ## Descrição
