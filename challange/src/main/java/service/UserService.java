@@ -1,15 +1,27 @@
 package service;
 
 
+import controller.UserController;
+import dto.UserDto;
+import lombok.AllArgsConstructor;
+import mapper.UserMapper;
 import model.User;
+import org.springframework.stereotype.Service;
+import repository.UserRepository;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
-public interface UserService {
-    List<User> getAllUser();
-    User createUser(User user);
-    Optional<User> getUserById(Long id);
-    User updateUser(long id, User userDetails);
-    void deleteUser(Long id);
+
+@Service
+@AllArgsConstructor
+public class UserService {
+    private final UserRepository userRepository;
+    private final UserMapper userMapper;
+
+    Optional<UserDto>buscarUUID(UUID uuid) {
+        return userRepository.findByUuid(uuid).map(userMapper::toDto);
+    }
+
 }
