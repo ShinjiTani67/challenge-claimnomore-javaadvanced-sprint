@@ -6,7 +6,7 @@ plugins {
 }
 
 tasks.named('bootJar') {
-	archiveFileName = 'challange_claimnomore.jar' // Define um nome fixo para o .jar
+	archiveFileName = 'challange_claimnomore.jar'
 }
 
 group = 'com.example'
@@ -31,7 +31,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'io.springfox:springfox-boot-starter:3.0.0' //documentação por swagger
+	implementation 'io.springfox:springfox-boot-starter:3.0.0'
 	implementation 'org.mapstruct:mapstruct:1.5.5.Final'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
 	compileOnly 'org.projectlombok:lombok'
