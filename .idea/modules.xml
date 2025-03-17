@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/challange_sprint01_java.iml" filepath="$PROJECT_DIR$/.idea/challange_sprint01_java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/challange.main.iml" filepath="$PROJECT_DIR$/.idea/modules/challange.main.iml" />
     </modules>
   </component>
 </project>
