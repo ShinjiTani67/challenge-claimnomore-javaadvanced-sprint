@@ -41,7 +41,7 @@ spring:
       hibernate:
         format_sql: true
   datasource:
-    url: jdbc:oracle:thin:@//HOST:PORT/SERVICE_NAME
+    url: jdbc:oracle:thin:@//localhost:1521/ORCL
     username: RM553587
     password: 0406197
     driver-class-name: oracle.jdbc.OracleDriver
