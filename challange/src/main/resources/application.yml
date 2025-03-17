@@ -27,10 +27,10 @@ spring:
     name: ecommerce-thymeleaf
   thymeleaf:
     cache: false
-    encoding: UTF-8
+    encoding: ISO-8859-1
   http:
     encoding:
-      charset: UTF-8
+      charset: ISO-8859-1
   jpa:
     database-platform: org.hibernate.dialect.Oracle12cDialect
     hibernate:
@@ -46,14 +46,14 @@ spring:
     password: 0406197
     driver-class-name: oracle.jdbc.OracleDriver
   messages:
-    encoding: UTF-8
+    encoding: ISO-8859-1
     basename: messages
   h2:
     console:
       enabled: true
-      path: /h2-console  # Caminho para acessar o console H2 no navegador
-    show-sql: true  # To show SQL queries in the console (optional)
-    # open-in-view: false  # Best practice to disable Open Session in View pattern
+      path: /h2-console
+    show-sql: true
+
   devtools:
     restart:
       enabled: true
@@ -63,8 +63,8 @@ logging:
     br: DEBUG
     org:
       hibernate:
-        SQL: DEBUG         # Ativa o log das SQL queries
+        SQL: DEBUG
         type:
           descriptor:
             sql:
-              BasicBinder: TRACE  # Mostra parâmetros das queries
+              BasicBinder: TRACE
