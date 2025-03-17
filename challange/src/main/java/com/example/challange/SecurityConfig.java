@@ -59,7 +59,9 @@ public class SecurityConfig {
             logoutSuccessHandler.setPostLogoutRedirectUri("{baseUrl}/");
             logout.logoutSuccessHandler(logoutSuccessHandler);
         });
+
 //lembrar de voltar aqui
+
         http.authorizeHttpRequests(requests -> {
             requests.requestMatchers("/", "/produtos", "/produtos/novo", "categorias", "categorias/nova").authenticated();
             requests.anyRequest().denyAll();
