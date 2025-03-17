@@ -6,6 +6,9 @@ keycloak:
   realm: fiap-keycloak
 
 spring:
+  jackson:
+    default-property-inclusion: non_null
+    locale: en_US
   security:
     oauth2:
       client:
@@ -24,6 +27,7 @@ spring:
     name: ecommerce-thymeleaf
   thymeleaf:
     cache: false
+    encoding: UTF-8
   http:
     encoding:
       charset: UTF-8
