@@ -40,11 +40,19 @@ spring:
     properties:
       hibernate:
         format_sql: true
-  datasource:
-    url: jdbc:oracle:thin:@//localhost:1521/ORCL #tem q ver o url certo
-    username: RM553587
-    password: 0406197
-    driver-class-name: oracle.jdbc.OracleDriver
+        datasource:
+        url: jdbc:h2:mem:testdb
+        driver-class-name: org.h2.Driver
+        username: sa
+        password: ""
+        initialize: true
+        schema: classpath:schema.sql
+        data: classpath:data.sql
+#  datasource:
+#    url: jdbc:oracle:thin:@//localhost:1521/ORCL
+#    username: RM553587
+#    password: 0406197
+#    driver-class-name: oracle.jdbc.OracleDriver
   messages:
     encoding: ISO-8859-1
     basename: messages
